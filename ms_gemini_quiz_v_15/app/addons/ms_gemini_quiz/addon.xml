@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>ms_gemini_quiz</id>
+    <version>1.0.0</version>
+    <default_language>ru</default_language>
+    <priority>500</priority>
+    <status>active</status>
+    <has_icon>N</has_icon>
+    <supplier>MakeShop</supplier>
+    <settings>
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="api_keys">
+                        <name>API Ключи Google Gemini (каждый с новой строки, до 10 шт.)</name>
+                        <type>textarea</type>
+                    </item>
+                    <item id="proxy_host">
+                        <name>Прокси сервер (IP:PORT)</name>
+                        <type>input</type>
+                    </item>
+                    <item id="proxy_auth">
+                        <name>Прокси Логин:Пароль (user:pass если требуется)</name>
+                        <type>input</type>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+    <functions>
+        <item for="install">fn_ms_gemini_quiz_install</item>
+        <item for="uninstall">fn_ms_gemini_quiz_uninstall</item>
+    </functions>
+</addon>
